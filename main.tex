@@ -1,0 +1,70 @@
+\documentclass{njustthesis}
+\njustsetup{%
+  author = 吴振宇,
+  id = 916101630117,
+  discipline = 电子信息工程,
+  title = 通信原理,
+  subtitle = 实验搭档：邓远征 9171040G0216,
+  title* = Communication Principles,
+  cover-title = 通信原理\\实验报告,
+  abstract-prefix = 实验报告,
+  header-title = 通信原理实验报告,
+  supervisor = 程风雷,
+  supervisor-title = 副教授,
+  judge = 程风雷,
+  judge-title = 副教授,
+  signature = \includegraphics{signature},
+}
+\usepackage[refpage]{nomencl}
+\makenomenclature%
+\renewcommand{\nomname}{术语}
+\renewcommand{\pagedeclaration}{，第1次出现在页~}
+\usepackage{minted}
+\setminted{%
+  breakanywhere,
+  breakanywheresymbolpre = {},
+  breaksymbolleft = {},
+  breaksymbolindentleftnchars = 0,
+}
+\usepackage{boxie}
+\usepackage{siunitx}
+\sisetup{mode = text}
+\usepackage{cases}
+\usepackage{csvsimple}
+\usepackage{booktabs}
+\usepackage{subfiles}
+\usepackage{subcaption}
+\usepackage{fvextra}
+\fvset{%
+  highlightcolor = {yellow!20, white},
+}
+\newtheorem{definition}{定义}
+\newtheorem{theorem}{定理}
+\numberwithin{Exercise}{chapter}
+\numberwithin{Answer}{chapter}
+\begin{document}
+
+\maketitle
+% \copyrightpage%
+% \subfile{sub/abstract}
+
+% \frontmatter
+% \tableofcontents
+% \listoffigures
+% \listoftables
+% \listofexercises%
+% \printnomenclature%
+
+\mainmatter%
+\subfile{sub/sample}
+\subfile{sub/hdb3}
+\subfile{sub/bpsk}
+\subfile{sub/pll}
+\subfile{sub/tdfm}
+
+% \backmatter%
+% \bibliography{bib/main}
+\subfile{sub/acknowledgement}
+
+\end{document}
+
